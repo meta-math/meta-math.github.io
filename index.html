@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>MetaMath</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">MetaMath:<br />Bootstrap Your Own
+                            Mathematical Questions for Large Language Models</h1>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Arxiv PDF link -->
+                                <!-- <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span> -->
+
+                                <!-- Supplementary PDF link -->
+                                <!-- <span class="link-block">
+                                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Supplementary</span>
+                                    </a>
+                                </span> -->
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/meta-math/MetaMath" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- ArXiv abstract Link -->
+                                <!-- <span class="link-block">
+                                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Large language models (LLMs) have pushed the limits of natural language understanding and
+                            achieved human-level reasoning performance. Despite the great success, most existing
+                            open-source LLMs (<i>e.g.</i>, Llama-2) are still far away from achieving human-level
+                            performance on mathematical reasoning due to its complex reasoning procedures. To bridge
+                            this gap, we propose <i>MetaMath</i>, a finetuned language model that specializes in
+                            mathematical reasoning. Specifically, we start by bootstrapping mathematical questions by
+                            rewriting the question from multiple perspectives without extra knowledge, which results in
+                            a new dataset called <i>MetaMathQA</i>. Then we finetune the Llama-2 models on MetaMathQA.
+                            Experimental results on two popular benchmarks (<i>i.e.</i>, GSM8K and MATH) for
+                            mathematical reasoning show that MetaMath outperforms all the open-source LLMs by a
+                            significant margin. Our MetaMath-7B model achieves 66.4% on GSM8K and 19.4% on MATH,
+                            exceeding the state-of-the-art models of the same size by 11.5% and 8.7%. Particularly,
+                            <i>MetaMath-70B</i> achieves an accuracy of 82.3% on <i>GSM8K</i>, slightly better than
+                            <i>GPT-3.5-Turbo</i>. We release the <i>MetaMathQA</i> dataset, the pretrained
+                            <i>MetaMath</i> models with different mode size and the training code for the public use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop has-text-centered">
+                <h2 class="title is-3">Overview</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img style="width: 100%;" src="static/images/metamath.svg" alt="metamath" />
+                            <h2 class="subtitle">
+                                Figure 1: Overview of the <i>MetaMathQA</i> data and <i>MetaMath</i>.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3 has-text-centered">MetaMathQA</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <h3 class="title is-4">Answer Augmentation (AnsAug)</h3>
+                            <div class="box">
+                                <p>
+                                    <b>Generated Answer:</b>
+                                    Let's think step by step.
+                                    Weng earns \$12 an hour for babysitting, so for 50 minutes, she would earn \$12/60
+                                    minutes x 50 minutes = \$10.
+                                    Therefore, Weng earned \$10 for 50 minutes of babysitting.
+                                    The answer is \$10.
+                                </p>
+                                <p>
+                                    <b>Generated Answer:</b>
+                                    Let's think step by step. Weng earns
+                                    \$12 an hour for babysitting.
+                                    There are 60 minutes in an hour, so in 1 minute she earns \$12/60 = \$0.20.
+                                    Yesterday, she did 50 minutes of babysitting, so she earned \$0.20 x 50 = \$10.
+                                    The answer is \$10.
+                                </p>
+                            </div>
+                            <p>&nbsp;</p>
+                            <h3 class="title is-4">Rephrasing Question</h3>
+                            <div class="box">
+                                <p>
+                                    You are an AI assistant to help me rephrase questions.
+                                    Follow the given examples.
+                                </p>
+                                <p>
+                                    <b>Question:</b> Olivia has \$23. She bought five bagels for \$3 each. How much
+                                    money does she have left?
+                                </p>
+                                <p>
+                                    <b>Rephrase the above question:</b> What is the amount of money that Olivia has left
+                                    after purchasing five bagels for \$3 each, if she initially had \$23?
+                                </p>
+                                <p>
+                                    <b>Question:</b> Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On
+                                    wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?
+                                </p>
+                                <b>Rephrase the above question:</b> After losing 23 golf balls on Tuesday and an
+                                additional 2 on Wednesday, how many golf balls does Michael have left if he initially
+                                had 58 golf balls?
+                                </p>
+                                <p>
+                                    ...
+                                </p>
+                                <p>
+                                    <b>Question:</b> <span style="color: red">{Q}</span>
+                                </p>
+                                <p>
+                                    <b>Rephrase the above question:</b>
+                                </p>
+                            </div>
+                            <p>&nbsp;</p>
+                            <h3 class="title is-4">Self-Verification Question</h3>
+                            <div class="box">
+                                <p><b>Question:</b> Weng earns <span style="color: red">x</span> an hour for
+                                    babysitting. Yesterday,
+                                    she just did 50 minutes of babysitting. She earned 10. <span style="color: red">What
+                                        is the
+                                        value of unknown variable x?</span></p>
+                                <p>
+                                    <b>Answer:</b> Let's think step by step.
+                                    To solve this problem, we need to determine the value of x, which represents the
+                                    amount
+                                    of money.
+                                    Weng earns per hour for babysitting.
+                                    We know that Weng did 50 minutes of babysitting and earned 10.
+                                    Let's convert the 50 minutes to hours by dividing it by 60:
+                                    50 minutes / 60 = 5/6 hours.
+                                    Now, let's set up the equation using the information given:
+                                    Amount earned per hour * Hours spent babysitting = Total earnings
+                                    x * (5/6) = 10
+                                    Let's simplify and solve for x:
+                                    (5/6)x = 10
+                                    To isolate x, we multiply both sides of the equation by 6/5:
+                                    (5/6)x * (6/5) = 10 * (6/5)
+                                    x = 12.
+                                    The value of x is 12.
+                                </p>
+                            </div>
+                            <p>&nbsp;</p>
+                            <h3 class="title is-4">FOBAR Question</h3>
+                            <div class="box">
+                                <p>
+                                    <b>Question:</b>
+                                    Weng earns <span style="color: red">x</span> an hour for babysitting. Yesterday, she
+                                    just did 50
+                                    minutes of babysitting. How much did she earn?
+                                    <span style="color: red">If we know the answer to the above question is 10, what is
+                                        the value of
+                                        unknown variable x?</span>
+                                </p>
+                                <p>
+                                    <b>Answer:</b>
+                                    Let's think step by step.
+                                    Weng earns \$x an hour for babysitting.
+                                    Yesterday, she did 50 minutes of babysitting, which is equivalent to 50/60 = 5/6 of
+                                    an
+                                    hour.
+                                    To find out how much she earned, we can multiply the number of hours by her hourly
+                                    rate:
+                                    (5/6) * x = 5x/6.
+                                    We are given that she earned \$10, so we can write: 5x/6 = 10.
+                                    Multiplying both sides by 6/5, we get: x = 12.
+                                    The value of x is 12.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered is-fifths-fifths">
+                        <h2 class="title is-3">Comprehensive Results: Break Down</h2>
+                        <div class="content has-text-justified">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>#params</th>
+                                        <th>GSM8K</th>
+                                        <th>MATH</th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabResults">
+                                    <tr class="th">
+                                        <td colspan="4" style="text-align: center; font-weight: bold;">
+                                            Closed-source Model</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPT-4</td>
+                                        <td>-</td>
+                                        <td>92.0</td>
+                                        <td>42.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPT-3.5-Turbo</td>
+                                        <td>-</td>
+                                        <td>80.8</td>
+                                        <td>34.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PaLM</td>
+                                        <td>8B</td>
+                                        <td>4.1</td>
+                                        <td>1.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PaLM</td>
+                                        <td>62B</td>
+                                        <td>33.0</td>
+                                        <td>4.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PaLM</td>
+                                        <td>540B</td>
+                                        <td>56.5</td>
+                                        <td>8.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PaLM-2</td>
+                                        <td>540B</td>
+                                        <td>80.7</td>
+                                        <td>34.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flan-PaLM 2</td>
+                                        <td>540B</td>
+                                        <td>84.7</td>
+                                        <td>33.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minerva</td>
+                                        <td>8B</td>
+                                        <td>16.2</td>
+                                        <td>14.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minerva</td>
+                                        <td>62B</td>
+                                        <td>52.4</td>
+                                        <td>27.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minerva</td>
+                                        <td>540B</td>
+                                        <td>58.8</td>
+                                        <td>33.6</td>
+                                    </tr>
+
+                                    <tr class="th">
+                                        <td colspan="4" style="text-align: center; font-weight: bold;">
+                                            Open-source models (1-10B)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-1</td>
+                                        <td>7B</td>
+                                        <td>11.0</td>
+                                        <td>2.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-2</td>
+                                        <td>7B</td>
+                                        <td>14.6</td>
+                                        <td>2.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MPT</td>
+                                        <td>7B</td>
+                                        <td>6.8</td>
+                                        <td>3.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Falcon</td>
+                                        <td>7B</td>
+                                        <td>6.8</td>
+                                        <td>2.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InternLM</td>
+                                        <td>7B</td>
+                                        <td>31.2</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPT-J</td>
+                                        <td>6B</td>
+                                        <td>34.9</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ChatGLM 2</td>
+                                        <td>6B</td>
+                                        <td>32.4</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Qwen</td>
+                                        <td>7B</td>
+                                        <td>51.6</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baichuan-2</td>
+                                        <td>7B</td>
+                                        <td>24.5</td>
+                                        <td>5.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SFT</td>
+                                        <td>7B</td>
+                                        <td>41.6</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RFT</td>
+                                        <td>7B</td>
+                                        <td>50.3</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WizardMath</td>
+                                        <td>7B</td>
+                                        <td>54.9</td>
+                                        <td>10.7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MetaMath (<b>ours</b>)</td>
+                                        <td>7B</td>
+                                        <td><b>66.4</b></td>
+                                        <td><b>19.4</b></td>
+                                    </tr>
+                                    <tr class="th">
+                                        <td colspan="4" style="text-align: center; font-weight: bold;">
+                                            Open-source models (11-50B)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-1</td>
+                                        <td>13B</td>
+                                        <td>17.8</td>
+                                        <td>3.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-1</td>
+                                        <td>33B</td>
+                                        <td>35.6</td>
+                                        <td>7.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-2</td>
+                                        <td>13B</td>
+                                        <td>28.7</td>
+                                        <td>3.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-2</td>
+                                        <td>34B</td>
+                                        <td>42.2</td>
+                                        <td>6.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MPT</td>
+                                        <td>30B</td>
+                                        <td>15.2</td>
+                                        <td>3.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Falcon</td>
+                                        <td>40B</td>
+                                        <td>19.6</td>
+                                        <td>2.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAL</td>
+                                        <td>30B</td>
+                                        <td>-</td>
+                                        <td>12.7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vicuna</td>
+                                        <td>13B</td>
+                                        <td>27.6</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baichuan-2</td>
+                                        <td>13B</td>
+                                        <td>52.8</td>
+                                        <td>10.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SFT</td>
+                                        <td>13B</td>
+                                        <td>50.0</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RFT</td>
+                                        <td>13B</td>
+                                        <td>54.8</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WizardMath</td>
+                                        <td>13B</td>
+                                        <td>63.9</td>
+                                        <td>14.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MetaMath (<b>ours</b>)</td>
+                                        <td>13B</td>
+                                        <td><b>71.0</b></td>
+                                        <td><b>22.5</b></td>
+                                    </tr>
+
+                                    <tr class="th">
+                                        <td colspan="4" style="text-align: center; font-weight: bold;">
+                                            Open-source models (50-70B)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-1</td>
+                                        <td>65B</td>
+                                        <td>50.9</td>
+                                        <td>10.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LLaMA-2</td>
+                                        <td>70B</td>
+                                        <td>56.8</td>
+                                        <td>13.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RFT</td>
+                                        <td>70B</td>
+                                        <td>64.8</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WizardMath</td>
+                                        <td>70B</td>
+                                        <td>81.6</td>
+                                        <td>22.7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MetaMath (<b>ours</b>) <sup>‡</sup></td>
+                                        <td>70B</td>
+                                        <td><b>82.3</b></td>
+                                        <td><b>26.0</b></td>
+                                    </tr>
+                        </div>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>BibTex Code Here</code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            You are free to borrow the of this website, we just ask that you link back to this page in
+                            the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
