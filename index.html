@@ -132,7 +132,7 @@
                             exceeding the state-of-the-art models of the same size by 11.5% and 8.7%. Particularly,
                             <i>MetaMath-70B</i> achieves an accuracy of 82.3% on <i>GSM8K</i>, slightly better than
                             <i>GPT-3.5-Turbo</i>. We release the <i>MetaMathQA</i> dataset, the pretrained
-                            <i>MetaMath</i> models with different mode size and the training code for the public use.
+                            <i>MetaMath</i> models with different mode size and the training code for public use.
                         </p>
                     </div>
                 </div>
@@ -171,43 +171,27 @@
                             <div class="box">
                                 <p>
                                     <b>Generated Answer:</b>
-                                    Let's think step by step.
-                                    Weng earns \$12 an hour for babysitting, so for 50 minutes, she would earn \$12/60
-                                    minutes x 50 minutes = \$10.
-                                    Therefore, Weng earned \$10 for 50 minutes of babysitting.
-                                    The answer is \$10.
-                                </p>
-                                <p>
-                                    <b>Generated Answer:</b>
-                                    Let's think step by step. Weng earns
-                                    \$12 an hour for babysitting.
-                                    There are 60 minutes in an hour, so in 1 minute she earns \$12/60 = \$0.20.
-                                    Yesterday, she did 50 minutes of babysitting, so she earned \$0.20 x 50 = \$10.
-                                    The answer is \$10.
+                                    James buys 5 packs of beef that are 4 pounds each,
+                                    so he buys a total of 5 * 4 = 20 pounds of beef. The price of beef is $5.50
+                                    per pound, so he pays 20 * $5.50 = $110. The answer is: 110
                                 </p>
                             </div>
                             <p>&nbsp;</p>
                             <h3 class="title is-4">Rephrasing Question</h3>
                             <div class="box">
                                 <p>
-                                    You are an AI assistant to help me rephrase questions.
-                                    Follow the given examples.
+                                    You are an AI assistant to help me rephrase questions. Follow the given examples.
                                 </p>
                                 <p>
-                                    <b>Question:</b> Olivia has \$23. She bought five bagels for \$3 each. How much
-                                    money does she have left?
+                                    <b>Question:</b> Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
                                 </p>
                                 <p>
-                                    <b>Rephrase the above question:</b> What is the amount of money that Olivia has left
-                                    after purchasing five bagels for \$3 each, if she initially had \$23?
+                                    <b>Rephrase the above question:</b> What is the amount of money that Olivia has left after purchasing five bagels for \$3 each, if she initially had $23?
                                 </p>
                                 <p>
-                                    <b>Question:</b> Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On
-                                    wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?
+                                    <b>Question:</b> Michael had 58 golf balls. On Tuesday, he lost 23 golf balls. On Wednesday, he lost 2 more. How many golf balls did he have at the end of Wednesday?
                                 </p>
-                                <b>Rephrase the above question:</b> After losing 23 golf balls on Tuesday and an
-                                additional 2 on Wednesday, how many golf balls does Michael have left if he initially
-                                had 58 golf balls?
+                                <b>Rephrase the above question:</b> After losing 23 golf balls on Tuesday and an additional 2 on Wednesday, how many golf balls does Michael have left if he initially had 58 golf balls?
                                 </p>
                                 <p>
                                     ...
@@ -222,29 +206,22 @@
                             <p>&nbsp;</p>
                             <h3 class="title is-4">Self-Verification Question</h3>
                             <div class="box">
-                                <p><b>Question:</b> Weng earns <span style="color: red">x</span> an hour for
-                                    babysitting. Yesterday,
-                                    she just did 50 minutes of babysitting. She earned 10. <span style="color: red">What
-                                        is the
-                                        value of unknown variable x?</span></p>
+                                <p><b>Question:</b> James buys <span style="color: red">x</span> packs of beef that are 4 pounds each.  The price of beef is \$5.50 per pound. He paid 110. <span style="color: red">What is the value of unknown variable x?</span></p>
                                 <p>
-                                    <b>Answer:</b> Let's think step by step.
-                                    To solve this problem, we need to determine the value of x, which represents the
-                                    amount
-                                    of money.
-                                    Weng earns per hour for babysitting.
-                                    We know that Weng did 50 minutes of babysitting and earned 10.
-                                    Let's convert the 50 minutes to hours by dividing it by 60:
-                                    50 minutes / 60 = 5/6 hours.
-                                    Now, let's set up the equation using the information given:
-                                    Amount earned per hour * Hours spent babysitting = Total earnings
-                                    x * (5/6) = 10
+                                    <b>Answer:</b> To solve this problem, we need to determine the value of x, which represents the number of packs of beef that James bought.
+                                    Each pack of beef weighs 4 pounds and costs $5.50 per pound.
+                                    The total amount James paid is $110.
+                                    We can set up the equation as follows:
+                                    Number of packs of beef * Weight per pack * Price per pound = Total amount paid;
+                                    x * 4 * $5.50 = $110;
                                     Let's simplify and solve for x:
-                                    (5/6)x = 10
-                                    To isolate x, we multiply both sides of the equation by 6/5:
-                                    (5/6)x * (6/5) = 10 * (6/5)
-                                    x = 12.
-                                    The value of x is 12.
+                                    4x * $5.50 = $110;
+                                    22x = $110;
+                                    To isolate x, we divide both sides of the equation by 22:
+                                    22x / 22 = $110 / 22;
+                                    x = $5;
+                                    The value of x is 5.
+                                
                                 </p>
                             </div>
                             <p>&nbsp;</p>
@@ -252,26 +229,16 @@
                             <div class="box">
                                 <p>
                                     <b>Question:</b>
-                                    Weng earns <span style="color: red">x</span> an hour for babysitting. Yesterday, she
-                                    just did 50
-                                    minutes of babysitting. How much did she earn?
-                                    <span style="color: red">If we know the answer to the above question is 10, what is
-                                        the value of
-                                        unknown variable x?</span>
+                                    James buys <span style="color: red">x</span> packs of beef that are 4 pounds each. The price of beef is $5.50 per pound.  How much did he pay?
+                                    <span style="color: red">If we know the answer to the above question is 110, what is the value of unknown variable x?</span>
                                 </p>
                                 <p>
                                     <b>Answer:</b>
-                                    Let's think step by step.
-                                    Weng earns \$x an hour for babysitting.
-                                    Yesterday, she did 50 minutes of babysitting, which is equivalent to 50/60 = 5/6 of
-                                    an
-                                    hour.
-                                    To find out how much she earned, we can multiply the number of hours by her hourly
-                                    rate:
-                                    (5/6) * x = 5x/6.
-                                    We are given that she earned \$10, so we can write: 5x/6 = 10.
-                                    Multiplying both sides by 6/5, we get: x = 12.
-                                    The value of x is 12.
+                                    James buys x packs of beef that are 4 pounds each, so he buys a total of 4x pounds of beef.
+                                    The price of beef is $5.50 per pound, so the total cost of the beef is 5.50 * 4x = 22x.
+                                    We are given that the total cost is $110, so we can write: 22x = 110.
+                                    Dividing both sides by 22, we get: x = 5.
+                                    The value of x is 5.
                                 </p>
                             </div>
                         </div>
@@ -567,6 +534,7 @@
                         </div>
                         </tbody>
                         </table>
+                        Table 1: Comparison of testing accuracy to existing LLMs on GSM8K and MATH. <sup>‡</sup>Due to the computing resource limitation, we finetune MetaMath-70B using QLoRA 
                     </div>
                 </div>
             </div>
