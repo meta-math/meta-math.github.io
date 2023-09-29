@@ -164,16 +164,15 @@
                     <div class="content has-text-justified">
                         <p>
                             Large language models (LLMs) have pushed the limits of natural language understanding and
-                            achieved human-level reasoning performance. Despite the great success, most existing
-                            open-source LLMs (e.g., Llama-2) are still far away from achieving human-level
-                            performance on mathematical reasoning due to its complex reasoning procedures. To bridge
+                            exhibited excellent problem-solving ability. Despite the great success, most existing
+                            open-source LLMs (e.g., LLaMA-2) are still far away from satisfactory for solving mathematical problems due to its complex reasoning procedures. To bridge
                             this gap, we propose MetaMath, a finetuned language model that specializes in
                             mathematical reasoning. Specifically, we start by bootstrapping mathematical questions by
-                            rewriting the question from multiple perspectives without extra knowledge, which results in
-                            a new dataset called MetaMathQA. Then we finetune the Llama-2 models on MetaMathQA.
+                            rewriting the question from multiple perspectives, which results in
+                            a new dataset called MetaMathQA. Then we finetune the LLaMA-2 models on MetaMathQA.
                             Experimental results on two popular benchmarks (i.e., GSM8K and MATH) for
-                            mathematical reasoning show that MetaMath outperforms all the open-source LLMs by a
-                            significant margin. Our MetaMath-7B model achieves 66.4% on GSM8K and 19.4% on MATH,
+                            mathematical reasoning emonstrate that MetaMath outperforms all open-source LLMs by a
+                            significant margin. Our MetaMath-7B model achieves 66.5% on GSM8K and 19.8% on MATH,
                             exceeding the state-of-the-art models of the same size by 11.5% and 8.7%. Particularly,
                             MetaMath-70B achieves an accuracy of 82.3% on GSM8K, slightly better than
                             GPT-3.5-Turbo. We release the MetaMathQA dataset, the pretrained
@@ -230,34 +229,6 @@
                                     <p>Rephrasing Question</p>
                                 </div>
                                 <div class="message-body">
-                                    <p>
-                                        You are an AI assistant to help me rephrase questions. Follow the given
-                                        examples.
-                                    </p>
-                                    <p>
-                                        <b>Question:</b> Olivia has $23. She bought five bagels for $3 each. How much
-                                        money
-                                        does she have left?
-                                    </p>
-                                    <p>
-                                        <b>Rephrase the above question:</b> What is the amount of money that Olivia has
-                                        left
-                                        after purchasing five bagels for \$3 each, if she initially had $23?
-                                    </p>
-                                    <p>
-                                        <b>Question:</b> Michael had 58 golf balls. On Tuesday, he lost 23 golf balls.
-                                        On
-                                        Wednesday, he lost 2 more. How many golf balls did he have at the end of
-                                        Wednesday?
-                                    </p>
-                                    <b>Rephrase the above question:</b> After losing 23 golf balls on Tuesday and an
-                                    additional 2 on Wednesday, how many golf balls does Michael have left if he
-                                    initially
-                                    had 58 golf balls?
-                                    </p>
-                                    <p>
-                                        ...
-                                    </p>
                                     <p>
                                         <b>Question:</b> James buys 5
                                         packs of beef that are 4 pounds each.
